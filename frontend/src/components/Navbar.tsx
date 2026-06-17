@@ -64,7 +64,16 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl">♛</span>
+            <img
+              src="/favicon-light.png"
+              alt="Amulya Chess Logo Light"
+              className="h-8 w-8 object-contain dark:hidden"
+            />
+            <img
+              src="/favicon-dark.png"
+              alt="Amulya Chess Logo Dark"
+              className="h-8 w-8 object-contain hidden dark:block"
+            />
             <span className="font-heading text-xl font-bold tracking-wide text-foreground">
               {BUSINESS_CONFIG.company.name}
             </span>
@@ -303,9 +312,25 @@ export default function Navbar() {
             className="fixed inset-0 z-[60] bg-background flex flex-col"
           >
             <div className="flex items-center justify-between px-6 h-16">
-              <span className="font-heading text-xl font-bold">
-                ♛ {BUSINESS_CONFIG.company.name}
-              </span>
+              <Link
+                to="/"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center gap-2"
+              >
+                <img
+                  src="/favicon-light.png"
+                  alt="Amulya Chess Logo Light"
+                  className="h-8 w-8 object-contain dark:hidden"
+                />
+                <img
+                  src="/favicon-dark.png"
+                  alt="Amulya Chess Logo Dark"
+                  className="h-8 w-8 object-contain hidden dark:block"
+                />
+                <span className="font-heading text-xl font-bold text-foreground">
+                  {BUSINESS_CONFIG.company.name}
+                </span>
+              </Link>
               <button
                 onClick={() => setMobileOpen(false)}
                 aria-label="Close menu"

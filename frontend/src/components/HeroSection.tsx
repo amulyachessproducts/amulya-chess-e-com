@@ -67,22 +67,20 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Right - Chess Board */}
+        {/* Right - Chess Board (Commented out) */}
+        {/*
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative hidden lg:flex items-center justify-center"
         >
-          {/* Spinning rings */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-[420px] h-[420px] border border-primary/20 animate-spin-slow absolute" />
             <div className="w-[480px] h-[480px] border border-primary/10 animate-spin-reverse absolute" />
-            {/* Radial glow */}
             <div className="w-[350px] h-[350px] bg-primary/5 blur-3xl absolute" />
           </div>
 
-          {/* Board */}
           <div className="animate-float relative z-10 border-2 border-primary/40 shadow-2xl">
             <div className="grid grid-cols-8 w-[320px] h-[320px]">
               {pieces.flat().map((piece, i) => {
@@ -101,6 +99,32 @@ export default function HeroSection() {
                 );
               })}
             </div>
+          </div>
+        </motion.div>
+        */}
+
+        {/* Right - Theme-aware Hero Logo */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative hidden lg:flex items-center justify-center"
+        >
+          {/* Radial glow for aesthetics */}
+          <div className="absolute w-[350px] h-[350px] bg-primary/5 blur-3xl" />
+
+          {/* Logo Image */}
+          <div className="relative z-10 w-full max-w-[450px] animate-float">
+            <img
+              src="/hero-logo-light.png"
+              alt="Amulya Chess Logo Light"
+              className="w-full h-auto object-contain dark:hidden"
+            />
+            <img
+              src="/hero-logo-dark.png"
+              alt="Amulya Chess Logo Dark"
+              className="w-full h-auto object-contain hidden dark:block"
+            />
           </div>
         </motion.div>
       </div>

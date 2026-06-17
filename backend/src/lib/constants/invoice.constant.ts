@@ -1,10 +1,10 @@
 export const BUSINESS_CONFIG = {
   company: {
-    name: "Amulya Chess",
-    address: "42, Chess Lane, T. Nagar, Chennai – 600017, Tamil Nadu, India",
-    phone: "+91 98765 43210",
-    email: "hello@chesscraftindia.com",
-    supportEmail: "support@amulyachess.com",
+    name: "Amulya Chess Products",
+    address: "No.111, B.R.N.Garden, I Block, Broadway, Chennai - 600 108.",
+    phone: "+91 90804 67299",
+    email: "amulyachessproducts@gmail.com",
+    supportEmail: "amulyachessproducts@gmail.com",
     gst: "", // Add if available
     logo: "", // Updated logo URL
     signature: "", // Added signature image URL

@@ -5,6 +5,7 @@ import { useAuth } from '@/features/auth/AuthContext';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useEffect } from 'react';
+import { BUSINESS_CONFIG } from '@/config/business.config';
 
 export default function ProfileSettings() {
   const { user } = useAuth();
@@ -44,7 +45,7 @@ export default function ProfileSettings() {
                 </div>
               ))}
               <p className="font-mono text-[10px] text-muted-foreground italic">
-                To update personal details, contact support at hello@chesscraftindia.com
+                To update personal details, contact support at {BUSINESS_CONFIG.support.email}
               </p>
             </div>
           </motion.div>

@@ -4,6 +4,7 @@ import WhatsAppIcon from './WhatsAppIcon';
 import { useNavigate } from 'react-router-dom';
 import { useCartStore } from '@/stores/cartStore';
 import { useUIStore } from '@/stores/uiStore';
+import { BUSINESS_CONFIG } from '@/config/business.config';
 
 export default function CartSidebar() {
   const { items, removeItem, updateQty, subtotal, shipping, totalItems } = useCartStore();
@@ -16,7 +17,7 @@ export default function CartSidebar() {
 
   const whatsappLink = () => {
     const summary = items.map((i) => `${i.name} x${i.qty} — ₹${(i.price * i.qty).toLocaleString('en-IN')}`).join('%0A');
-    return `https://wa.me/919876543210?text=Hi!%20I'd%20like%20to%20order:%0A${summary}%0A%0ATotal:%20₹${sub.toLocaleString('en-IN')}`;
+    return `https://wa.me/${BUSINESS_CONFIG.support.whatsapp}?text=Hi!%20I'd%20like%20to%20order:%0A${summary}%0A%0ATotal:%20₹${sub.toLocaleString('en-IN')}`;
   };
 
   return (

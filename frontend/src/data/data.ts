@@ -98,7 +98,7 @@ import { Settings } from "@/lib/types";
 
 export const mockSettings: Settings = {
   general: {
-    siteName: "Amulya Chess",
+    siteName: "Amulya Chess Products",
     siteDescription: "Premium handcrafted chess sets and accessories.",
     currency: "INR",
     timezone: "Asia/Kolkata",

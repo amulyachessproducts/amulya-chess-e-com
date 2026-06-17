@@ -5,7 +5,7 @@
 
 export const BUSINESS_CONFIG = {
   company: {
-    name: "Amulya Chess",
+    name: "Amulya Chess Products",
   },
   pricing: {
     gstPercentage: 18,
@@ -13,12 +13,12 @@ export const BUSINESS_CONFIG = {
     shippingCost: 0, // Currently set to 0 as per requirements
   },
   support: {
-    email: "support@amulyachessproducts.in",
-    phone: "+91 98765 43210",
-    whatsapp: "919876543210",
-    address: "42, Chess Lane, T. Nagar, Chennai – 600017, Tamil Nadu, India",
-    instagram: "chesscraftindia",
+    email: "amulyachessproducts@gmail.com",
+    phone: "+91 90804 67299",
+    whatsapp: "919080467299",
+    address: "No.111, B.R.N.Garden, I Block, Broadway, Chennai - 600 108.",
+    instagram: "amulyachessproducts",
     mapsLink:
-      "https://www.google.com/maps/search/?api=1&query=42,+Chess+Lane,+T.+Nagar,+Chennai+–+600017",
+      "https://www.google.com/maps/search/?api=1&query=No.111,+B.R.N.Garden,+I+Block,+Broadway,+Chennai+-+600+108",
   },
 };
