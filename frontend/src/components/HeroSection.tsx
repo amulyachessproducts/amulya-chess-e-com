@@ -30,10 +30,23 @@ export default function HeroSection() {
             <br />
             tells a <em className="text-primary not-italic">story.</em>
           </h1>
-          <p className="font-body text-lg md:text-xl text-muted-foreground max-w-md mb-10 leading-relaxed">
+          <p className="hidden lg:block font-body text-lg md:text-xl text-muted-foreground max-w-md mb-10 leading-relaxed">
             Premium chess sets, boards, and accessories crafted for players who
             appreciate the art behind every game.
           </p>
+
+          <div className="lg:hidden mb-10 w-full max-w-[220px] mx-auto animate-float">
+            <img
+              src="/hero-logo-light.png"
+              alt="Amulya Chess Logo Light"
+              className="w-full h-auto object-contain dark:hidden"
+            />
+            <img
+              src="/hero-logo-dark.png"
+              alt="Amulya Chess Logo Dark"
+              className="w-full h-auto object-contain hidden dark:block"
+            />
+          </div>
 
           <div className="flex flex-wrap gap-4 mb-12">
             <Link
