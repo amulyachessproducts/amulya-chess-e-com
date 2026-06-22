@@ -15,6 +15,29 @@ const PORT = process.env.PORT || 3000;
 const FRONTEND_BASE_URL =
   process.env.FRONTEND_BASE_URL || "http://localhost:8080";
 
+const allowedOrigins = [
+  "http://localhost:8080",
+  "http://localhost:5173",
+  "http://localhost:3000",
+];
+
+if (process.env.FRONTEND_BASE_URL) {
+  const origin = process.env.FRONTEND_BASE_URL.trim().replace(/\/$/, "");
+  if (!allowedOrigins.includes(origin)) {
+    allowedOrigins.push(origin);
+  }
+  
+  const altOrigin = origin.startsWith("https://www.")
+    ? origin.replace("https://www.", "https://")
+    : origin.startsWith("https://")
+    ? origin.replace("https://", "https://www.")
+    : null;
+    
+  if (altOrigin && !allowedOrigins.includes(altOrigin)) {
+    allowedOrigins.push(altOrigin);
+  }
+}
+
 // --- Middleware Setup ---
 app.use(
   express.json({
@@ -24,7 +47,7 @@ app.use(
 app.use(cookieParser());
 app.use(
   cors({
-    origin: FRONTEND_BASE_URL, // Support multiple origins
+    origin: allowedOrigins,
     credentials: true,
     exposedHeaders: ["X-Auth-Error"],
   })

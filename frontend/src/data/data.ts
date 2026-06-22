@@ -10,6 +10,25 @@ export const categories: Record<string, { name: string; id: string; subcategorie
       "Pocket Chess Set",
     ],
   },
+  "chess-pieces": {
+    name: "CHESS PIECES (MEN)",
+    id: "chess-pieces",
+    subcategories: [
+      "Wooden Chess Pieces",
+      "Plastic Chess Pieces",
+      "Weighted Chess Pieces",
+      "Tournament Chess Pieces",
+    ],
+  },
+  "chess-boards": {
+    name: "CHESS BOARDS",
+    id: "chess-boards",
+    subcategories: [
+      "Wooden Chess Boards",
+      "Vinyl Chess Boards",
+      "Silicon Chess Boards",
+    ],
+  },
   "chess-bags": {
     name: "CHESS BAGS",
     id: "chess-bags",

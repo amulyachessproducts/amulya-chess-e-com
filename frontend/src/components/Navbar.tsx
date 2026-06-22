@@ -62,8 +62,8 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             <img
               src="/favicon-light.png"
               alt="Amulya Chess Logo Light"
@@ -74,13 +74,13 @@ export default function Navbar() {
               alt="Amulya Chess Logo Dark"
               className="h-8 w-8 object-contain hidden dark:block"
             />
-            <span className="font-heading text-xl font-bold tracking-wide text-foreground">
+            <span className="font-heading text-sm sm:text-base md:text-xl font-bold tracking-wide text-foreground whitespace-nowrap">
               {BUSINESS_CONFIG.company.name}
             </span>
           </Link>
 
           {/* Right side controls */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1 sm:gap-3">
             <button
               onClick={toggleTheme}
               className="p-2 text-muted-foreground hover:text-primary transition-colors"
@@ -311,11 +311,11 @@ export default function Navbar() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[60] bg-background flex flex-col"
           >
-            <div className="flex items-center justify-between px-6 h-16">
+            <div className="flex items-center justify-between px-4 h-16">
               <Link
                 to="/"
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center gap-2"
+                className="flex items-center gap-1.5 sm:gap-2 shrink-0"
               >
                 <img
                   src="/favicon-light.png"
@@ -327,7 +327,7 @@ export default function Navbar() {
                   alt="Amulya Chess Logo Dark"
                   className="h-8 w-8 object-contain hidden dark:block"
                 />
-                <span className="font-heading text-xl font-bold text-foreground">
+                <span className="font-heading text-base sm:text-xl font-bold text-foreground whitespace-nowrap">
                   {BUSINESS_CONFIG.company.name}
                 </span>
               </Link>

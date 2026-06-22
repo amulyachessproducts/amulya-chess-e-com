@@ -14,6 +14,7 @@ import {
   Bookmark,
   Tv,
   Handshake,
+  Grid,
 } from "lucide-react";
 import { useUIStore } from "@/stores/uiStore";
 import { useGetCategories } from "@/services/productService";
@@ -22,6 +23,8 @@ import { useGetCategories } from "@/services/productService";
 const CATEGORY_ICONS: Record<string, any> = {
   "chess-set": Crown,
   "chess-sets": Crown,
+  "chess-pieces": Crown,
+  "chess-boards": Grid,
   "chess-bags": ShoppingBag,
   "chess-clock": Timer,
   "chess-accessories": Settings,
